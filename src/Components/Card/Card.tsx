@@ -8,6 +8,7 @@ interface Props {
     rating: number,
     discount_percentage: number,
     price: number,
+    brand: string,
 }
 
 function Card(props: Props) {
