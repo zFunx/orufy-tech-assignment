@@ -6,7 +6,8 @@ function Search() {
     const filterContext = useContext(FilterContext);
 
     const search = (event: React.FormEvent<HTMLInputElement>): void => {
-        filterContext.setQuery(event.target.value)
+        const target = event.target as HTMLInputElement;
+        filterContext.setQuery(target.value)
     }
 
     return (
