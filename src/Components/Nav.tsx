@@ -3,6 +3,7 @@ import Search from './Search'
 
 // Assets
 import logo from '@/assets/mini-trips.com.png'
+import profilePic from '@/assets/profile-pic.jpg'
 import { AiOutlineUnorderedList } from 'react-icons/ai'
 import { RiNotification2Line } from 'react-icons/ri'
 
@@ -30,6 +31,11 @@ function Nav() {
                             <div className="w-2 h-2 bg-red-500 rounded-full" />
                         </div>
                     </div>
+
+                    {/* Profile pic */}
+                    <Link href="https://www.linkedin.com/in/v-kas/" target='_blank'>
+                        <img alt="Vikas Kumar" src={profilePic.src} className="rounded-full h-8 w-8 object-cover border-white border-2 shadow-lg" />
+                    </Link>
                 </div>
             </div>
         </div>
