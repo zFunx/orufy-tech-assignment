@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import { FilterContext } from '@/context/FilterContext';
+import { Sort } from '@/lib/sort';
+import { useContext, useState } from 'react';
 
 function SortDropdown() {
-    const [selectedOption, setSelectedOption] = useState('');
+    const filterContext = useContext(FilterContext);
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedOption(event.target.value);
+        filterContext.setSort(event.target.value as Sort);
     };
 
     return (
         <div>
             <select
                 id="sortDropdown"
-                value={selectedOption}
                 onChange={handleChange}
                 className="border border-gray-300 rounded px-2 py-1"
             >
-                <option value="">Sort by</option>
-                <option value="highToLow">High to Low</option>
-                <option value="lowToHigh">Low to High</option>
+                <option value={Sort.NoSort}>Sort by</option>
+                <option value={Sort.HighToLow}>High to Low</option>
+                <option value={Sort.LowToHigh}>Low to High</option>
             </select>
         </div>
     );
