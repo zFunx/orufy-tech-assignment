@@ -1,9 +1,9 @@
+import Sidebar from "@/Components/Sidebar/Sidebar";
+
 export default function Home() {
   return (
     <div className="flex">
-      <div>
-        Sidebar
-      </div>
+      <Sidebar />
       <div className="flex-1">
         Main
       </div>
