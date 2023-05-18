@@ -10,7 +10,7 @@ import { RiNotification2Line } from 'react-icons/ri'
 
 function Nav() {
     return (
-        <div className="shadow-xl p-3">
+        <div className="shadow-xl p-3 bg-white">
             <div className="max-w-4xl mx-auto flex justify-between items-center">
                 <div className='flex'>
                     <Link href="https://mini-trips.com" target="_blank"><img alt="logo" src={logo.src} className="h-8" /></Link>
