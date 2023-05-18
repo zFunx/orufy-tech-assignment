@@ -9,6 +9,7 @@ import NameFilter from "../Filter/NameFilter"
 import PriceFilter from "../Filter/PriceFilter"
 import { useContext } from 'react'
 import { FilterContext } from '@/context/FilterContext'
+import Link from 'next/link'
 
 interface Props {
     showSidebarOnMobile: boolean,
@@ -42,6 +43,12 @@ function Sidebar(props: Props) {
             </BoxHOC>
             <BoxHOC>
                 <PriceFilter priceRanges={priceRanges} />
+            </BoxHOC>
+            <BoxHOC>
+                <small>
+                    This page was created by <Link target="_blank" href="https://www.linkedin.com/in/v-kas/" className="font-bold underline">Vikas Kumar</Link>.
+                    You can reach me on <Link target="_blank" className='text-blue-400 underline' href="https://www.linkedin.com/in/v-kas/">linkedin.com/in/v-kas/</Link>, <Link target="_blank" className='text-gray-400 underline' href="https://github.com/zFunx">github.com/zFunx</Link> or on my personal blog <Link target="_blank" href="https://mini-trips.com" className="text-teal-500 underline">mini-trips.com</Link>
+                </small>
             </BoxHOC>
         </div>
     )
