@@ -13,7 +13,7 @@ export default function Home() {
       <Sidebar showSidebarOnMobile={showSidebarOnMobile} closeSidebar={() => setShowSidebarOnMobile(false)}/>
       <div className="md:flex-1 w-full">
         <div className="flex justify-between items-center gap-4 flex-wrap">
-          <div className="flex gap-2 cursor-pointer md:hidden" onClick={() => setShowSidebarOnMobile(true)}><GoSettings size={24} /> Filters</div>
+          <div className="flex gap-2 cursor-pointer sm:hidden" onClick={() => setShowSidebarOnMobile(true)}><GoSettings size={24} /> Filters</div>
           <NavLinks links={[
             {
               name: 'Home',
