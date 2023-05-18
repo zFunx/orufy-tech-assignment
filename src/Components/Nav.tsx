@@ -4,6 +4,7 @@ import Search from './Search'
 // Assets
 import logo from '@/assets/mini-trips.com.png'
 import { AiOutlineUnorderedList } from 'react-icons/ai'
+import { RiNotification2Line } from 'react-icons/ri'
 
 
 function Nav() {
@@ -16,10 +17,19 @@ function Nav() {
                         <Search />
                     </div>
                 </div>
-                <div className='flex'>
+                <div className='flex gap-6 items-center'>
+                    {/* Categories */}
                     <strong className="inline-flex gap-1 items-center cursor-pointer">
                         <AiOutlineUnorderedList /> Categories
                     </strong>
+
+                    {/* Notification */}
+                    <div className="relative cursor-pointer">
+                        <RiNotification2Line className="text-gray-600" />
+                        <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
+                            <div className="w-2 h-2 bg-red-500 rounded-full" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
