@@ -1,5 +1,6 @@
 import { Brand } from '@/lib/brand';
 import { Category } from '@/lib/category';
+import { PriceRange } from '@/lib/price';
 import { Sort } from '@/lib/sort';
 import { createContext, ReactNode, useState } from 'react';
 
@@ -15,7 +16,11 @@ export const FilterContext = createContext({
 
     categories: [] as Category[],
     addCategory: (category: Category) => { },
-    removeCategory: (category: Category) => { }
+    removeCategory: (category: Category) => { },
+
+    priceRanges: [] as PriceRange[],
+    addPriceRanges: (priceRange: PriceRange) => { },
+    removePriceRange: (priceRange: PriceRange) => { }
 });
 
 interface Props {
@@ -39,7 +44,17 @@ export default function FilterProvider({ children }: Props) {
         setCategories([...categories, category])
     }
     const removeCategory = (category: Category) => {
-        setCategories(prev => prev.filter(prevBrand => prevBrand != category))
+        setCategories(prev => prev.filter(prevCat => prevCat != category))
+    }
+
+    const [priceRanges, setPriceRanges] = useState<PriceRange[]>([])
+    const addPriceRanges = (priceRange: PriceRange) => {
+        setPriceRanges([...priceRanges, priceRange])
+        console.log('priceRanges', priceRanges);
+        
+    }
+    const removePriceRange = (priceRange: PriceRange) => {
+        setPriceRanges(prev => prev.filter(prevRange => prevRange.min != priceRange.min))
     }
 
     return <FilterContext.Provider value={{
@@ -54,6 +69,10 @@ export default function FilterProvider({ children }: Props) {
 
         categories,
         addCategory,
-        removeCategory
+        removeCategory,
+
+        priceRanges,
+        addPriceRanges,
+        removePriceRange
     }}>{children}</FilterContext.Provider>
 }

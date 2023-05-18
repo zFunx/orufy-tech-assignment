@@ -20,21 +20,34 @@ function Products() {
         }
 
         // Sort
-        if(filterContext.sort === Sort.LowToHigh){
+        if (filterContext.sort === Sort.LowToHigh) {
             filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
-        }else if(filterContext.sort === Sort.HighToLow){
+        } else if (filterContext.sort === Sort.HighToLow) {
             filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
         }
 
         // Brand filter
-        if(filterContext.brands.length > 0){
+        if (filterContext.brands.length > 0) {
             filteredProducts = filteredProducts.filter(product => filterContext.brands.includes(product.brand as Brand))
         }
-        
+
         // Category filter
-        if(filterContext.categories.length > 0){
+        if (filterContext.categories.length > 0) {
             filteredProducts = filteredProducts.filter(product => filterContext.categories.includes(product.category as Category))
         }
+
+        // Price Filter
+        if (filterContext.priceRanges.length > 0) {
+            filteredProducts = filteredProducts.filter(product => {
+                for (let i = 0; i < filterContext.priceRanges.length; i++) {
+                    if (filterContext.priceRanges[i].min <= product.price && filterContext.priceRanges[i].max > product.price) {
+                        return true
+                    } 
+                }
+                return false
+            })
+        }
+
 
         setProducts(filteredProducts)
     }, [filterContext])
