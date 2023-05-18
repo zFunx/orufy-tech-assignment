@@ -1,9 +1,16 @@
-import BoxHOC from "../BoxHOC"
 import { GoSettings } from 'react-icons/go'
+import { Brand } from "@/lib/brand"
+import { Category } from "@/lib/category"
+import { priceRanges } from '@/lib/price'
+
+// Components
+import BoxHOC from "../BoxHOC"
+import NameFilter from "../Filter/NameFilter"
+import PriceFilter from "../Filter/PriceFilter"
 
 function Sidebar() {
     return (
-        <div className="bg-white shadow rounded w-[200px]">
+        <div className="bg-white shadow rounded w-[250px]">
             <BoxHOC>
                 <div className="flex justify-between items-center">
                     <strong className="text-lg">Filter</strong>
@@ -11,7 +18,13 @@ function Sidebar() {
                 </div>
             </BoxHOC>
             <BoxHOC>
-                Filter
+                <NameFilter names={Brand}/>
+            </BoxHOC>
+            <BoxHOC>
+                <NameFilter names={Category}/>
+            </BoxHOC>
+            <BoxHOC>
+                <PriceFilter priceRanges={priceRanges}/>
             </BoxHOC>
         </div>
     )

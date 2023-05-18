@@ -1,7 +1,13 @@
-function BoxHOC({children}) {
-    return (
-        <div className="p-4 border-b border-t">{children}</div>
-    )
+import { ReactNode } from 'react';
+
+interface Props {
+    children: ReactNode;
 }
 
-export default BoxHOC
+function BoxHOC({ children }: Props) {
+    return (
+        <div className="p-4 border-b border-t">{children}</div>
+    );
+}
+
+export default BoxHOC;
