@@ -1,4 +1,6 @@
+import Card from "@/Components/Card/Card";
 import NavLinks from "@/Components/NavLinks";
+import Products from "@/Components/Products";
 import Sidebar from "@/Components/Sidebar/Sidebar";
 import SortDropdown from "@/Components/Sort";
 
@@ -24,6 +26,10 @@ export default function Home() {
           ]} />
 
           <SortDropdown />
+        </div>
+
+        <div className="pt-4">
+          <Products />
         </div>
       </div>
     </div>

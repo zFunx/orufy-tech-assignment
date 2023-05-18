@@ -1,0 +1,184 @@
+{
+  "items": [
+    {
+      "image_link": "/images/product-1.png",
+      "name": "Apple MacBook Pro",
+      "category": "Electronics",
+      "rating": 4.5,
+      "num_ratings": 100,
+      "price": 1499.99,
+      "discount_percentage": 10
+    },
+    {
+      "image_link": "/images/product-1.png",
+      "name": "Nike Air Max 270",
+      "category": "Clothing",
+      "rating": 4.2,
+      "num_ratings": 50,
+      "price": 129.99,
+      "discount_percentage": 20
+    },
+    {
+      "image_link": "/images/product-1.png",
+      "name": "Instant Pot Duo",
+      "category": "Home",
+      "rating": 4.8,
+      "num_ratings": 500,
+      "price": 99.99,
+      "discount_percentage": 0
+    },
+    {
+      "image_link": "/images/product-1.png",
+      "name": "Wilson NFL Football",
+      "category": "Sports",
+      "rating": 4.7,
+      "num_ratings": 200,
+      "price": 29.99,
+      "discount_percentage": 15
+    },
+    {
+      "image_link": "/images/product-1.png",
+      "name": "Urban Decay Naked Palette",
+      "category": "Beauty",
+      "rating": 4.9,
+      "num_ratings": 300,
+      "price": 54.99,
+      "discount_percentage": 5
+    },
+    {
+      "image_link": "/images/product-2.jpg",
+      "name": "Samsung 4K Smart TV",
+      "category": "Electronics",
+      "rating": 4.6,
+      "num_ratings": 350,
+      "price": 799.99,
+      "discount_percentage": 12
+    },
+    {
+      "image_link": "/images/product-2.jpg",
+      "name": "Adidas Originals Superstar",
+      "category": "Clothing",
+      "rating": 4.4,
+      "num_ratings": 100,
+      "price": 79.99,
+      "discount_percentage": 30
+    },
+    {
+      "image_link": "/images/product-2.jpg",
+      "name": "iRobot Roomba Vacuum",
+      "category": "Home",
+      "rating": 4.3,
+      "num_ratings": 200,
+      "price": 299.99,
+      "discount_percentage": 0
+    },
+    {
+      "image_link": "/images/product-2.jpg",
+      "name": "Wilson Tennis Racket",
+      "category": "Sports",
+      "rating": 4.5,
+      "num_ratings": 150,
+      "price": 89.99,
+      "discount_percentage": 20
+    },
+    {
+      "image_link": "/images/product-2.jpg",
+      "name": "Fenty Beauty Gloss Bomb",
+      "category": "Beauty",
+      "rating": 4.7,
+      "num_ratings": 500,
+      "price": 19.99,
+      "discount_percentage": 0
+    },
+    {
+      "image_link": "/images/product-3.jpg",
+      "name": "Sony PlayStation 5",
+      "category": "Electronics",
+      "rating": 4.9,
+      "num_ratings": 1000,
+      "price": 499.99,
+      "discount_percentage": 0
+    },
+    {
+      "image_link": "/images/product-3.jpg",
+      "name": "Levi's 501 Jeans",
+      "category": "Clothing",
+      "rating": 4.6,
+      "num_ratings": 300,
+      "price": 59.99,
+      "discount_percentage": 10
+    },
+    {
+      "image_link": "/images/product-3.jpg",
+      "name": "Dyson V11 Vacuum",
+      "category": "Home",
+      "rating": 4.8,
+      "num_ratings": 500,
+      "price": 599.99,
+      "discount_percentage": 5
+    },
+    {
+      "image_link": "/images/product-3.jpg",
+      "name": "Nike Dri-FIT T-Shirt",
+      "category": "Sports",
+      "rating": 4.3,
+      "num_ratings": 200,
+      "price": 24.99,
+      "discount_percentage": 15
+    },
+    {
+      "image_link": "/images/product-3.jpg",
+      "name": "MAC Cosmetics Lipstick",
+      "category": "Beauty",
+      "rating": 4.7,
+      "num_ratings": 400,
+      "price": 17.99,
+      "discount_percentage": 0
+    },
+    {
+      "image_link": "/images/product-4.jpg",
+      "name": "Samsung Galaxy Watch",
+      "category": "Electronics",
+      "rating": 4.5,
+      "num_ratings": 800,
+      "price": 249.99,
+      "discount_percentage": 20
+    },
+    {
+      "image_link": "/images/product-4.jpg",
+      "name": "Adidas Ultraboost Shoes",
+      "category": "Clothing",
+      "rating": 4.9,
+      "num_ratings": 600,
+      "price": 179.99,
+      "discount_percentage": 0
+    },
+    {
+      "image_link": "/images/product-4.jpg",
+      "name": "Amazon Echo Dot",
+      "category": "Home",
+      "rating": 4.4,
+      "num_ratings": 1000,
+      "price": 39.99,
+      "discount_percentage": 10
+    },
+    {
+      "image_link": "/images/product-4.jpg",
+      "name": "Spalding NBA Basketball",
+      "category": "Sports",
+      "rating": 4.6,
+      "num_ratings": 250,
+      "price": 29.99,
+      "discount_percentage": 0
+    },
+    {
+      "image_link": "/images/product-4.jpg",
+      "name": "Estée Lauder Double Wear Foundation",
+      "category": "Beauty",
+      "rating": 4.8,
+      "num_ratings": 400,
+      "price": 49.99,
+      "discount_percentage": 5
+    }
+  ]
+}
