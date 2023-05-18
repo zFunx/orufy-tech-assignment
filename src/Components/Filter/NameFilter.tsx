@@ -1,5 +1,7 @@
 interface Props<T> {
-    names: T
+    names: T,
+    addNameFilter: (val: any) => void,
+    removeNameFilter: (val: any) => void
 }
 
 function NameFilter(props: Props<any>) {
@@ -10,7 +12,7 @@ function NameFilter(props: Props<any>) {
                     <input
                         type="checkbox"
                         className="h-4 w-4 text-indigo-600"
-                    // onChange={onChange}
+                        onChange={(event) => event.target.checked ? props.addNameFilter(name) : props.removeNameFilter(name)}
                     />
                     <span className="ml-2 text-gray-700">{name as string}</span>
                 </label>

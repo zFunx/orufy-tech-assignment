@@ -4,6 +4,8 @@ import Card from './Card/Card';
 import Link from 'next/link';
 import { FilterContext } from '@/context/FilterContext';
 import { Sort } from '@/lib/sort';
+import { Brand } from '@/lib/brand';
+import { Category } from '@/lib/category';
 
 function Products() {
     const [products, setProducts] = useState(data.items);
@@ -22,6 +24,16 @@ function Products() {
             filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
         }else if(filterContext.sort === Sort.HighToLow){
             filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
+        }
+
+        // Brand filter
+        if(filterContext.brands.length > 0){
+            filteredProducts = filteredProducts.filter(product => filterContext.brands.includes(product.brand as Brand))
+        }
+        
+        // Category filter
+        if(filterContext.categories.length > 0){
+            filteredProducts = filteredProducts.filter(product => filterContext.categories.includes(product.category as Category))
         }
 
         setProducts(filteredProducts)

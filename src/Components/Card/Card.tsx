@@ -16,7 +16,7 @@ function Card(props: Props) {
             <img alt="product image" src={props.image_link} className="w-full h-32 object-cover" />
             <div className="flex flex-col gap-1 p-2 overflow-hidden">
                 <strong className="truncate">{props.name}</strong>
-                <small>{props.category}</small>
+                <small>{props.category} | {props.brand}</small>
                 <div className="flex gap-2 items-center"><RatingStar value={props.rating} /><small>({props.num_ratings})</small></div>
                 <div className="flex gap-2 flex-wrap items-end">
                     <strong>${props.price}</strong>{

@@ -7,8 +7,12 @@ import { priceRanges } from '@/lib/price'
 import BoxHOC from "../BoxHOC"
 import NameFilter from "../Filter/NameFilter"
 import PriceFilter from "../Filter/PriceFilter"
+import { useContext } from 'react'
+import { FilterContext } from '@/context/FilterContext'
 
 function Sidebar() {
+    const filterContext = useContext(FilterContext);
+
     return (
         <div className="bg-white shadow rounded w-[250px]">
             <BoxHOC>
@@ -18,13 +22,20 @@ function Sidebar() {
                 </div>
             </BoxHOC>
             <BoxHOC>
-                <NameFilter names={Brand}/>
+                <NameFilter names={Brand}
+                    addNameFilter={(val) => filterContext.addBrand(val as Brand)}
+                    removeNameFilter={(val) => filterContext.removeBrand(val as Brand)}
+                />
             </BoxHOC>
             <BoxHOC>
-                <NameFilter names={Category}/>
+                <NameFilter
+                    names={Category}
+                    addNameFilter={(val) => filterContext.addCategory(val as Category)}
+                    removeNameFilter={(val) => filterContext.removeCategory(val as Category)}
+                />
             </BoxHOC>
             <BoxHOC>
-                <PriceFilter priceRanges={priceRanges}/>
+                <PriceFilter priceRanges={priceRanges} />
             </BoxHOC>
         </div>
     )
