@@ -12,7 +12,7 @@ interface Props {
 
 function NavLinks(props: Props) {
     return (
-        <div className="flex gap-4">
+        <div className="flex gap-4 whitespace-nowrap overflow-auto hide-srollbar">
             {props.links.map((link, index) => <React.Fragment key={link.name}>
                 <Link href={link.link} className="hover:underline">{link.name}</Link>
                 {index < props.links.length - 1 && <span>/</span>}

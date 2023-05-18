@@ -11,14 +11,14 @@ import { RiNotification2Line } from 'react-icons/ri'
 function Nav() {
     return (
         <div className="shadow-xl p-3 bg-white">
-            <div className="max-w-4xl mx-auto flex justify-between items-center">
-                <div className='flex'>
+            <div className="max-w-4xl mx-auto flex justify-between items-center flex-wrap gap-4">
+                <div className='flex flex-wrap gap-2'>
                     <Link href="https://mini-trips.com" target="_blank"><img alt="logo" src={logo.src} className="h-8" /></Link>
-                    <div className="ml-12">
+                    <div className="sm:ml-12">
                         <Search />
                     </div>
                 </div>
-                <div className='flex gap-6 items-center'>
+                <div className='flex gap-6 items-center flex-wrap'>
                     {/* Categories */}
                     <strong className="inline-flex gap-1 items-center cursor-pointer">
                         <AiOutlineUnorderedList /> Categories

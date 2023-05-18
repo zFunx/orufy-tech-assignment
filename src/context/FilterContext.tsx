@@ -50,8 +50,6 @@ export default function FilterProvider({ children }: Props) {
     const [priceRanges, setPriceRanges] = useState<PriceRange[]>([])
     const addPriceRanges = (priceRange: PriceRange) => {
         setPriceRanges([...priceRanges, priceRange])
-        console.log('priceRanges', priceRanges);
-        
     }
     const removePriceRange = (priceRange: PriceRange) => {
         setPriceRanges(prev => prev.filter(prevRange => prevRange.min != priceRange.min))

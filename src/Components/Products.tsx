@@ -54,7 +54,7 @@ function Products() {
 
 
     return (
-        <Link href="https://mini-trips.com" target="_blank" className="grid grid-cols-3 gap-4">
+        <Link href="https://mini-trips.com" target="_blank" className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {products.map(item => <Card key={item.name} {...item} />)}
         </Link>
     )
